@@ -37,7 +37,7 @@ void mul ( unsigned long long a[SIZE][SIZE], unsigned long long b[SIZE][SIZE] ) 
             a[i][j] = res[i][j];
 }
  
- /* Eleva a matriz "a" por "n", guarda o resultado em "res". */
+/* Eleva a matriz "a" por "n", guarda o resultado em "res". */
 void power ( unsigned long long a[SIZE][SIZE], unsigned long long n, unsigned long long res[SIZE][SIZE] ) {
     one ( res );
  
@@ -67,11 +67,11 @@ int main ( ) {
         for ( i = 1; i <= naves; i++ ) {
             for ( j = 1; j <= 4; j++ ) {
                 scanf ( "%llu", &painel );
-				/* Monta o grafo com a quantidade de viagens de "i" até "painel". */
+		/* Monta o grafo com a quantidade de viagens de "i" até "painel". */
                 a[i][painel]++;
             }
         }
-		/* Eleva a matriz de adjacência pela quantidade de bilhetes. */
+	/* Eleva a matriz de adjacência pela quantidade de bilhetes. */
         power ( a, bilhetes, res );
         printf ( "%llu", res[partida][destino] );
         puts ( "" );
